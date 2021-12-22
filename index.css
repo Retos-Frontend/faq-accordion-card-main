@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+
+    /*Text*/
+    --very-dark-desaturated-blue: hsl(238, 19%, 16%);
+    --soft-red: hsl(14, 88%, 65%);
+
+    /*Gradient*/
+    --soft-violet: hsl(273, 75%, 66%);
+    --soft-blue: hsl(240, 73%, 65%);
+
+    /*Gradient*/
+    --very-dark-grayish-blue: hsl(237, 12%, 33%);
+    --dark-grayish-blue: hsl(240, 6%, 50%);
+
+    --light-grayish-blue: hsl(240, 5%, 91%);
+}
+
+
+.body {
+    background: linear-gradient(var(--soft-violet), var(--soft-blue));
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+.container {
+    position: absolute;
+    background-color: var(--light-grayish-blue);
+    width: 900px;
+    height: 500px;
+    border-radius: 10px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-family: Kumbh, sans-serif;
+}
+
+@media screen and (max-width: 450px) {
+    .container {
+        position: relative;
+        width: 360px;
+        height: 70vh;
+        grid-template-rows: 15% 85%;
+        grid-template-columns: 1fr;
+        top: 150px;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+}
+
+.container__title {
+    position: absolute;
+    top: 50px;
+    left: 7%;
+}
+
+@media screen and (max-width: 450px) {
+    .container__title {
+        text-align: center;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+}
+
+
+.container__second{
+    position: relative;
+}
+
+.container__main {
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    right: 0;
+    left: 0;
+    margin: auto;
+    padding: 10px;
+    top: 80px;
+}
+
+.container__questions {
+    margin-top: 30px;
+}
+
+.container__question {
+    height: 35px;
+    cursor: pointer;
+    color: var(--dark-grayish-blue);
+}
+
+.container__question:hover .container__button{
+    color: var(--soft-red);
+    font-weight: 700;
+}
+
+.absolute {
+    position: absolute;
+}
+.container__img {
+    right: 5px;
+}
+
+.container__awnser {
+    display: none;
+}
+
+.container__button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: var(--dark-grayish-blue);
+    font-family: Kumbh, sans-serif;
+    font-weight: 400;
+    font-size: 1em;
+
+}
+
+
+.container__background{
+    height: 700px;
+    width: 800px;
+    bottom: -80px;
+    left: -400px;
+}
+
+@media screen and (max-width: 450px) {
+    .container__background {
+        display: none;
+    }
+    .container__box {
+        display: none;
+    }
+    .container__women {
+        display: none;
+    }
+}
+
+.container__women {
+    left: -90px;
+    top: 70px;
+}
+.container__box {
+    top: 200px;
+    left: -100px;
+    z-index: 10;
+}
+
+@media screen and (max-width: 450px) {
+    .container__background {
+        display: none;
+    }
+    .container__box {
+        display: none;
+    }
+    .container__women {
+        display: none;
+    }
+}
+
+.container__background--mobile {
+    display: none;
+}
+
+.container__women--mobile {
+    display: none;
+}
+
+@media screen and (max-width: 450px) {
+    .container__background--mobile {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+
+    .container__women--mobile {
+        display: block;
+        position: absolute;
+        top: -90px;
+        width: 200px;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+
+}
+
+.container__first {
+    position: relative;
+    overflow: hidden;
+}
+
+.button__active {
+    color: var(--very-dark-desaturated-blue);
+    font-weight: 700;
+}
+
+.anwser__active {
+    color: var(--dark-grayish-blue);
+    display: block;
+    font-weight: 400;
+    animation: fadeIn 0.3s, forwards;
+}
+
+.footer {
+    font-family: Kumbh, sans-serif;
+    position: fixed;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
