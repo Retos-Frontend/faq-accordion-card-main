@@ -11,6 +11,7 @@ const cleanAnwsers = (element) => {
     questions.forEach((question) => {
         if(question.getAttribute('index') !== element.getAttribute('index')) {
             question.childNodes[1].childNodes[1].classList.remove('button__active');
+            question.childNodes[1].childNodes[3].classList.remove('arrow__rotate');
             question.classList.remove('button__active')
         }
     });
@@ -20,6 +21,7 @@ question.forEach((questio, index) => {
     questio.addEventListener('click', () => {
         cleanAnwsers(anwsers[index]);
         questions[index].childNodes[1].childNodes[1].classList.toggle('button__active');
+        questions[index].childNodes[1].childNodes[3].classList.toggle('arrow__rotate');
         questio.classList.toggle('button__active');
         anwsers[index].classList.toggle('anwser__active');
     })
