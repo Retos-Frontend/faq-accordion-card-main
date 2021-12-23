@@ -31,7 +31,7 @@
 
 .container {
     position: absolute;
-    background-color: var(--light-grayish-blue);
+    background-color: #fff;
     width: 900px;
     height: 500px;
     border-radius: 10px;
@@ -92,14 +92,14 @@
 }
 
 .container__questions {
-    border-bottom: 1px var(--dark-grayish-blue) solid;
+    border-bottom: 1px var(--light-grayish-blue) solid;
     margin-top: 30px;
 }
 
 .container__question {
     height: 35px;
     cursor: pointer;
-    color: var(--dark-grayish-blue);
+    color: var(--light-grayish-blue);
 }
 
 .container__question:hover .container__button{
@@ -206,6 +206,8 @@
 .anwser__active {
     color: var(--dark-grayish-blue);
     display: block;
+    font-family: Kumbh, sans-serif;
+    font-size: 0.8em;
     font-weight: 400;
     animation: fadeIn 0.3s forwards;
 }
@@ -223,9 +225,6 @@
 .arrow__rotate {
     animation: rotateIn 0.3s forwards;
 }
-.arrow__rotate--exit {
-    animation: rotateOut 0.3s forwards;
-}
 
 @keyframes fadeIn {
     0% {
@@ -242,13 +241,5 @@
     }
     100% {
         transform: rotate(180deg);
-    }
-}
-@keyframes rotateOut {
-    0% {
-        transform: rotate(180deg);
-    }
-    100% {
-        transform: rotate(0deg);
     }
 }
